@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="hotel-calendar.css">
+</head>
+<body>
+<div id="hotel-calendar"></div>
+<script src="jquery_2_1_4.js"></script>
+<script src="hotel-calendar.js"></script>
+<script>
+    $('#hotel-calendar').calendarSwitch({
+        selectors: {
+            sections : "#hotel-calendar"
+        },
+        controlDay: true,//知否控制在daysnumber天之内，这个数值的设置前提是总显示天数大于90天
+        // daysNumber: "5", //控制天数
+        startDay: "2018-05-26",
+        endDay: "2018-05-30",
+        comeOutColor: "rgba(228,167,102,.5)",        //入住和离店之间的颜色
+        lockStartDay: false, // 锁定开始时间
+        callback: function( param ) {
+            console.log(param)
+        }
+    });
+</script>
+</body>
+</html>
